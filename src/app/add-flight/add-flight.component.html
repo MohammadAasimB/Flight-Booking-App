@@ -1,0 +1,107 @@
+<body>
+    
+    <div class="AdminNav">
+        <div class="AdminLogo">
+            <h2>AdminPannel</h2>
+        </div>
+
+        <div class="AdminLinks">
+            <a routerLink="/admin">Flight Details</a>
+            <a routerLink="/bookingData">Booking Details</a>
+            <a href="">Check In</a>
+            <!-- <a href="">Table4</a>
+            <a href="">Table5</a> -->
+        </div>
+
+        <div class="Adminbtn">
+            <button>Logout</button>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="mainLoginCont">
+        <div class="LoginImg">
+        
+        </div>
+        <div class="loginContiner">
+            <div>
+                <h3>Add Flight</h3>
+    <form (ngSubmit)="onSubmit()">
+                        
+
+        <p>Flight Number</p>
+        <input [(ngModel)]="flightData.flight_No" type="text"  placeholder="Flight Number" name="flight_No" value=""> 
+
+        <p>Departure Time</p>
+        <input [(ngModel)]="flightData.departure_Time" type="time" placeholder="Departure Time" name="departure_Time">
+    
+        <p>Arrival Time</p>
+        <input [(ngModel)]="flightData.arrival_Time" type="time" placeholder="Arrival Time" name="arrival_Time">
+
+
+
+        <p>From</p>
+        <input [(ngModel)]="cflight.from" type="text"  placeholder="" name="from" value=""> 
+
+        <p>To</p>
+        <input [(ngModel)]="cflight.to" type="text" placeholder="" name="to">
+
+        <p>Price</p>
+        <input [(ngModel)]="cflight.price" type="number" placeholder="" name="price">
+
+        <p>Total Seats</p>
+        <input [(ngModel)]="cflight.total_seats" type="number" placeholder="" name="total_seats">
+
+        <p>Avaiable Seats</p>
+        <input [(ngModel)]="cflight.available_seats" type="number" placeholder="" name="available_seats">
+
+        <p>Departure Date</p>
+        <input [(ngModel)]="cflight.departure_Date" type="date" placeholder="" name="departure_Date">
+
+        
+    <button type="submit" routerLink="/addFlight">Submit</button>
+  
+</form>
+
+
+
+
+<!-- <form (ngSubmit)="onSubmit()">
+                        
+
+    <p>From</p>
+    <input [(ngModel)]="flightData.flight_No" type="text"  placeholder="" name="from" value=""> 
+
+    <p>To</p>
+    <input [(ngModel)]="flightData.departure_Time" type="time" placeholder="" name="to">
+
+    <p>Price</p>
+    <input [(ngModel)]="flightData.arrival_Time" type="number" placeholder="" name="price">
+
+    <p>Total Seats</p>
+    <input [(ngModel)]="flightData.arrival_Time" type="number" placeholder="" name="total_seats">
+
+    <p>Avaiable Seats</p>
+    <input [(ngModel)]="flightData.arrival_Time" type="number" placeholder="" name="available_seats">
+
+    <p>Departure Date</p>
+    <input [(ngModel)]="flightData.arrival_Time" type="date" placeholder="" name="departure_Date">
+
+   
+<button type="submit">Submit</button>
+
+</form> -->
+</div>
+</div>
+</div>
+
+
+
+</body>

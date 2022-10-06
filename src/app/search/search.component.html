@@ -1,0 +1,266 @@
+
+<body>
+    <div class="navContiner">
+        <div class="logo"><h2>FlightBookingSystem</h2></div>
+        <div class="links">
+            <a href="">link1</a>
+            <a href="">link2</a>
+            <a href="">link3</a>
+            <a href="">link4</a>
+            <a href="">Check In</a>
+        </div>
+        <div class="acc">
+            <a href="">Signout</a>
+        </div>
+    </div>
+
+
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./Navigation.css">
+    <link rel="stylesheet" href="./Hero.css">
+    <title>Hero</title>
+</head> -->
+
+
+
+<!-- search -->
+
+    <div class="heroContiner">
+       <div class="SearchFlightCont">
+        <form action="" (ngSubmit)="onSubmit()">
+            <div class="textIp">
+                <div>
+                    <p>From location</p>
+                    <input placeholder="from location" required [(ngModel)]="form.from" type="text" placeholder="" name="from"  #from="ngModel">
+                </div>
+                <div>
+                    <p>To location</p>
+                    <input  placeholder="to location" required [(ngModel)]="form.to" type="text" placeholder="" name="to" #to="ngModel">
+                </div>
+            </div>
+            <div class="check">
+                <input type="checkbox"  name="" id="" (change)="onCheckboxClick($event, 'one')">
+                <label for="">one way only</label>
+                
+            </div>
+            <div class="date">
+                <div>
+                    <p>Departure date</p>
+                    <input type="date" required [(ngModel)]="form.departure_Date" name="departure" id="" #departure_Date="ngModel">
+                </div>
+
+                <div class="one">
+                    <p>Return date</p>
+                    <input [disabled]="ck" type="date" name="return" id="">
+                </div>
+            </div>
+            <div class="submit">
+                <button href="#feedCont" type="submit">Search</button>
+            </div>
+        </form>
+        </div>
+    </div>
+
+    <!-- <div class="main"></div> -->
+
+
+<!-- flights -->
+
+
+    <div class="feedCont" id="feedCont">
+        <div class="card" *ngFor="let fligh of result">
+            <div class="flightId">
+                <p>From</p>
+                <span>{{fligh.from}}</span>
+            </div>
+            <div class="depDate">
+                <p>To</p>
+                <span>{{fligh.to}}</span>
+            </div>
+            <div class="arrival">
+                <p>Departure Date</p>
+                <span>{{fligh.departure_Date}}</span>
+            </div>
+            <div class="departure">
+                <p>Price</p>
+                <span>&#x20B9; {{fligh.price}}</span>
+            </div>
+            <div class="price">
+                <p>Available Seats</p>
+                <span> {{fligh.available_seats}}</span>
+            </div>
+            <div class="price" *ngFor="let a of fligh.flight">
+                <p>Flight No.</p>
+                <span> {{a.flight_No}}</span>
+            </div>
+            <div class="price" *ngFor="let a of fligh.flight">
+                <p>Departure Time</p>
+                <span> {{a.departure_Time}}</span>
+            </div>
+            <div class="price" *ngFor="let a of fligh.flight">
+                <p>Arrival Time</p>
+                <span> {{a.arrival_Time}}</span>
+            </div>
+
+
+            <div class="book">
+                <button type="submit" [routerLink]="['/booking',fligh.id]">Book</button>
+            </div>
+        </div>
+        <!-- <div class="card">
+            <div class="flightId">
+                <p>flight Id</p>
+                <span>1000203337</span>
+            </div>
+            <div class="depDate">
+                <p>Departure Date</p>
+                <span>15-06-2023</span>
+            </div>
+            <div class="arrival">
+                <p>Arrival time</p>
+                <span>10:22</span>
+            </div>
+            <div class="departure">
+                <p>Departure time</p>
+                <span>10:52</span>
+            </div>
+            <div class="price">
+                <p>price</p>
+                <span> &#x20B9; 22,3000</span>
+            </div>
+            <div class="book">
+                <button routerLink="/booking">Book</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="flightId">
+                <p>flight Id</p>
+                <span>1000203337</span>
+            </div>
+            <div class="depDate">
+                <p>Departure Date</p>
+                <span>15-06-2023</span>
+            </div>
+            <div class="arrival">
+                <p>Arrival time</p>
+                <span>10:22</span>
+            </div>
+            <div class="departure">
+                <p>Departure time</p>
+                <span>10:52</span>
+            </div>
+            <div class="price">
+                <p>price</p>
+                <span> &#x20B9; 22,3000</span>
+            </div>
+            <div class="book">
+                <button routerLink="/booking">Book</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="flightId">
+                <p>flight Id</p>
+                <span>1000203337</span>
+            </div>
+            <div class="depDate">
+                <p>Departure Date</p>
+                <span>15-06-2023</span>
+            </div>
+            <div class="arrival">
+                <p>Arrival time</p>
+                <span>10:22</span>
+            </div>
+            <div class="departure">
+                <p>Departure time</p>
+                <span>10:52</span>
+            </div>
+            <div class="price">
+                <p>price</p>
+                <span> &#x20B9; 22,3000</span>
+            </div>
+            <div class="book">
+                <button routerLink="/booking">Book</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="flightId">
+                <p>flight Id</p>
+                <span>1000203337</span>
+            </div>
+            <div class="depDate">
+                <p>Departure Date</p>
+                <span>15-06-2023</span>
+            </div>
+            <div class="arrival">
+                <p>Arrival time</p>
+                <span>10:22</span>
+            </div>
+            <div class="departure">
+                <p>Departure time</p>
+                <span>10:52</span>
+            </div>
+            <div class="price">
+                <p>price</p>
+                <span> &#x20B9; 22,3000</span>
+            </div>
+            <div class="book">
+                <button routerLink="/booking">Book</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="flightId">
+                <p>flight Id</p>
+                <span>1000203337</span>
+            </div>
+            <div class="depDate">
+                <p>Departure Date</p>
+                <span>15-06-2023</span>
+            </div>
+            <div class="arrival">
+                <p>Arrival time</p>
+                <span>10:22</span>
+            </div>
+            <div class="departure">
+                <p>Departure time</p>
+                <span>10:52</span>
+            </div>
+            <div class="price">
+                <p>price</p>
+                <span> &#x20B9; 22,3000</span>
+            </div>
+            <div class="book">
+                <button routerLink="/booking">Book</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="flightId">
+                <p>flight Id</p>
+                <span>1000203337</span>
+            </div>
+            <div class="depDate">
+                <p>Departure Date</p>
+                <span>15-06-2023</span>
+            </div>
+            <div class="arrival">
+                <p>Arrival time</p>
+                <span>10:22</span>
+            </div>
+            <div class="departure">
+                <p>Departure time</p>
+                <span>10:52</span>
+            </div>
+            <div class="price">
+                <p>price</p>
+                <span> &#x20B9; 22,3000</span>
+            </div>
+            <div class="book">
+                <button routerLink="/booking">Book</button>
+            </div>
+        </div> -->
+    </div>
+</body>
+

@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.logo h2{
+    color: mediumslateblue ;
+}
+.navContiner{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 10px 15px 10px rgba(0, 0, 0, 0.1), 0 4px 6px 10px rgba(0, 0, 0, 0.05);
+}
+.links a{
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+    margin-right: 2rem;
+    transition: 0.3s all ease-out;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+}
+.links a:hover{
+    color: white;
+    background: mediumslateblue;
+}
+.acc a{
+    text-decoration: none;
+    color: mediumslateblue;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border:2px solid mediumslateblue;
+    transition: 0.3s all ease-out;
+
+}
+.acc a:hover{
+    background: mediumslateblue;
+    color: white;
+}
+
+
+
+
+/* search */
+
+.tabCol{
+    display: none;
+}
+.body{
+    display: flex;
+}
+.heroContiner{
+    flex: 1;
+    height: 90vh;
+    background-image: linear-gradient( 83.2deg,  rgba(150,93,233,1) 10.8%, rgba(99,88,238,1) 94.3% );
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+   
+}
+.SearchFlightCont{
+    background: white;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border-radius: 5px;
+    -webkit-box-shadow: -11px 15px 26px -5px rgba(0,0,0,0.58);
+    -moz-box-shadow: -11px 15px 26px -5px rgba(0,0,0,0.58);
+    box-shadow: -11px 15px 26px -5px rgba(0,0,0,0.58);
+}
+.textIp, .check, .date{
+    display: flex;
+    flex-direction: row;
+}
+.textIp div{
+    margin: 0.5rem;
+}
+.textIp div input{
+    width: 20rem;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid mediumslateblue;
+    padding: 0.5rem 1rem;
+    font-size: 14pt;
+}
+.date div{
+    margin: 0.5rem;
+}
+.date div input{
+    width: 20rem;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid mediumslateblue;
+    font-size: 14pt;
+    
+} 
+.submit{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.submit button{
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    background: mediumslateblue;
+    color: white;
+    font-size: 12pt;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.check input{
+    width: 1rem;
+    height: 1rem;
+}
+.check{
+    display: block;
+    
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0.5rem ;
+}
+
+.SearchFlightCont p{
+    font-size: 11pt;
+    color: rgb(83, 83, 83);
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+   
+}
+body::-webkit-scrollbar-thumb {
+   background-color: mediumslateblue;
+   border-radius: 20px;
+}
+
+/* flights */
+
+
+.feedCont{
+    margin-top: 3rem;
+    display: flex;
+    
+    align-items:stretch;
+    flex-direction: column;
+    width: 100%;
+   
+}
+
+.card{
+    margin: 0.5rem 3rem;
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: -18px 17px 51px -21px rgba(112,112,112,0.7);
+}
+.card div span{
+    
+    font-size: 18pt;
+    font-weight: 300;
+}
+.card div  p{
+    color: grey;
+    margin: 1rem 0;
+}
+.book button{
+    border: none;
+    padding: 0.3rem 1rem;
+    background: mediumslateblue;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.price span{
+    font-weight: 10000;
+    
+}

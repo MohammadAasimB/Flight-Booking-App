@@ -1,0 +1,62 @@
+
+<body>
+    <div class="navContiner">
+        <div class="logo"><h2>FlightBookingSystem</h2></div>
+        <div class="links">
+            <a href="">link1</a>
+            <a href="">link2</a>
+            <a href="">link3</a>
+            <a href="">link4</a>
+            <a href="">link5</a>
+        </div>
+        <div class="acc">
+            <a href="">Signout</a>
+        </div>
+    </div>
+
+    <router-outlet></router-outlet>
+
+</body>
+
+
+
+
+<body>
+    <div class="mainLoginCont">
+        <div class="LoginImg">
+        
+        </div>
+        <div class="loginContiner">
+            <div>
+                <h3>Flight booking</h3>
+                
+                <form (ngSubmit)="onSubmit()">
+                        
+                        <p>Form</p>
+                        <input  type="text" disabled="true" placeholder="" name="from" value="{{from}}">
+
+                        <p>To</p>
+                        <input  type="text" disabled="true" placeholder="" name="To" value="{{to}}"> 
+
+                        <p>Name Of Passenger</p>
+                        <input [(ngModel)]="passenger.passenger_name" type="text" placeholder="Type your Name hear" name="passenger_name">
+                    
+                        <p>Age</p>
+                        <input [(ngModel)]="passenger.passenger_age" type="number" placeholder="Type your Age hear" name="passenger_age">
+                    
+                        <p>Seat No.</p>
+                        <input [(ngModel)]="passenger.passenger_seat" type="number" placeholder="Type your Seat number" name="passenger_seat">
+
+                        <p>Amount</p>
+                        <input  type="number" disabled="true" placeholder="" name="Amount" value="{{amount}}">
+                    <!-- </div> -->
+                    <!-- <button (click)="addpassenger">Add Passenger</button> -->
+
+                    
+                   <button type="submit" [routerLink]="['/payment',passenger.passenger_name,amount]">Submit</button>
+                  
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

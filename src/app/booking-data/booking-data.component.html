@@ -1,0 +1,82 @@
+<body>
+    
+
+<div class="AdminNav">
+    <div class="AdminLogo">
+        <h2>AdminPannel</h2>
+    </div>
+
+    <div class="AdminLinks">
+        <a routerLink="/admin">Flight Details</a>
+        <a routerLink="/bookingData">Booking Details</a>
+        <a href="">Check In</a>
+    </div>
+
+    <div class="Adminbtn">
+        <button>Logout</button>
+    </div>
+
+</div>
+
+
+<div class="DataTable">
+            
+    <table>
+        <tr>
+            
+            <th>Booking Id </th>
+            <!-- <th>Flight Id </th>  -->
+            <th>booking date </th>
+            <th>Passenger Id </th>
+            <th>Passenger Name</th>
+            <th>age</th>
+            <th>seat No.</th>
+            <th>amount</th>
+            <th>total_amount</th> 
+            <th>booking cancelled</th>
+            <th>checked in</th>
+            <th>payment completed</th>
+        </tr>
+
+        <tbody >
+            <tr *ngFor="let booking of bookings">
+                <td>{{ booking.booking_id}}</td>
+                <!-- <td *ngFor="let i of booking.fligh">{{i}}</td> -->
+                <td>{{ booking.booking_date}}</td>
+                <td>
+                    <ul style="list-style: none;">
+                    <li *ngFor="let i of booking.passenger">{{i.passenger_id}}</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul style="list-style: none;">
+                        <li *ngFor="let i of booking.passenger">{{i.passenger_name}}</li>
+                        </ul>
+                </td>
+                <td>
+                    <ul style="list-style: none;">
+                        <li *ngFor="let i of booking.passenger">{{i.passenger_age}}</li>
+                        </ul>
+                </td>
+                <td>
+                    <ul style="list-style: none;">
+                        <li *ngFor="let i of booking.passenger">{{i.passenger_seat}}</li>
+                        </ul>
+                </td>
+                <td>
+                    <ul style="list-style: none;">
+                        <li *ngFor="let i of booking.passenger">{{i.amount}}</li>
+                        </ul>
+                </td>
+                <td>{{ booking.total_amount}}</td>
+                <td>{{ booking.booking_cancelled}}</td>
+                <td>{{ booking.checked_in}}</td>
+                <td>{{ booking.payment_completed}}</td>
+            </tr>
+
+        </tbody>
+        
+        
+    </table>
+</div>
+</body>
